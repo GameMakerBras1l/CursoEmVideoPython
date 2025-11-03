@@ -9,4 +9,6 @@ print("Os 10 primeiros números dessa PA(progreção aritimetica) são")
 
 for c in range (1, 10+1):
     tg = t + (c - 1)*r
-    print(tg)
+    print(tg, end= " -> ")
+
+print("Acabou a PA")

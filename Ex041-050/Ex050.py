@@ -9,4 +9,4 @@ for c in range(0, 6):
 if soma == 0:
     print("Vc não digitou nenhum número par")
 else:
-    print(f"A somaa de todos os numeros pares digitados é de {soma}")
+    print(f"A soma de todos os numeros pares digitados é de {soma}")
