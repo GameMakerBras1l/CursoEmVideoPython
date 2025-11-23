@@ -22,7 +22,7 @@ while pc != use:
 print("")
 
 if x < 6:
-    print(f"Parabens vc acertou o numero em {x} tentativas")
+    print(f"Parabens vc acertou o número em {x} tentativas")
 
 else:
     print(f"Você precisou de {x} tentativas")
