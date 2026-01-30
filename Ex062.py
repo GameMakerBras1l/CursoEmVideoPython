@@ -1,20 +1,22 @@
-t = int(input("Digite o Termo: "))
+termo = int(input("Digite o Termo: "))
 
-r = int(input("Digite a Razão: "))
+razao = int(input("Digite a Razão: "))
 
-tg = 0
+count = 1
+total = 0
+mais = 10
 
-x = 0
 
-c = "S"
+while mais != 0:
+    total = total + mais
+    while count <= total:
+        print("{} -> ".format(termo), end="")
+        termo += razao
+        count += 1
 
-while c == "S":
-    tg = t + (x + 1)*r
-    print(tg)
+    print("PAUSA")
 
-    x +=1
-
-    c = input("Digite 'S' se deseja mais um termo: ").upper()
+    mais = int(input("Quantos a mais vc quer mostrar? "))
 
 
 print("FIM DA PA")
