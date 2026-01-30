@@ -1,4 +1,6 @@
-num = int(input("Digite um número para calcular o fatorial: "))
+from math import factorial
+
+"""num = int(input("Digite um número para calcular o fatorial: "))
 fat = 1
 
 if num < 0:
@@ -8,10 +10,17 @@ elif num == 0:
     print("O fatorial de 0 é 1")
 
 else:
+
+
     num_original = num
 
     while num > 0:
         fat *= num
         num -= 1
 
-    print(f"O Fatorial de {num_original} é {fat}")
+    print(f"O Fatorial de {num_original} é {fat}")"""
+
+num = int(input("Digite um número para calcular seu Fatorial: "))
+fat = factorial(num)
+
+print("O fatorial de {} é {}".format(num, fat))
