@@ -1,20 +1,18 @@
-num = int(input("Digite um numero qualquer: "))
-
-x = 0
-
-y = 1
-
-z = 0
-
-c = 0
-
+print("-"*30)
 print("Sequencia de Fibonacci")
+print("-"*30)
+num = int(input("Quantos termos vc queer mostrar? "))
+t1 = 0
+t2 = 1
 
-while c < num:
-    z = x + y
+print("~"*30)
+print("{} → {}".format(t1, t2), end="")
 
-    print(z)
+count = 3
 
-    x = z
-
-    c +=1
+while count <= num:
+    t3 = t1 + t2
+    count += 1
+    print(" → {}".format(t3), end="")
+    t1 = t2
+    t2 = t3
