@@ -1,0 +1,42 @@
+Desafio 01 - Análise Forense do Sistema
+
+1. Descrição do Problema
+
+O Sistema bancário usa três listas globais para armazenar os dados
+dos titulares, saldos e tipos. Cada uma das contas é indentificada
+pelo indeci da lista.
+
+As transações também armazenam apenas os indices das contas de origem
+e seus destinos.
+
+2. Causa do Erro
+
+O índice de uma lista representa apenas a posição do elemento contido nela.
+
+Quando uma conta é removida utilizando pop(), todos os elementos posteriores
+mudam de posição.
+
+Entretanto, o histórico de transações continua armazenando nos índices antigos.
+
+3. Demostração do Erro
+
+Após executar a função de manutenção mensal, algumas contas são removidas.
+Isso reduz o tamanho das listas e altera os índices das contas restantes.
+
+Quando o programa tenta acessar o histórico de transações utilizando esses
+índices antigos, pode ocorrer:
+
+Traceback (most recent call last):
+  File "c:\Users\Marcel Filho\Desktop\Python_Scripts\Aulas\CursoEmVideoPython\Senac_Works\desafio01_forense.py", line 71, in <module>
+    origem = titulares[t["de"]]
+             ~~~~~~~~~^^^^^^^^^
+IndexError: list index out of range
+
+4. Conclusão
+
+Índices de listas não são uma forma confiável de representar a identidade
+de entidades em um sistema. Como os índices podem mudar quando elementos
+são removidos ou inseridos, o histórico de dados pode se tornar inconsistente.
+
+Uma abordagem mais segura seria utilizar um identificador único e imutável
+(ID) para cada conta.
