@@ -14,12 +14,32 @@ class NaveEspacial:
         self.tripulacao = tripulacao
         self.integridade_casco = integridade_casco
 
+        self.escudo = None
+
     def viajar(self, anos_luz):
         self.integridade_casco -= anos_luz
 
         if self.integridade_casco < 0:
             self.integridade_casco = 0
 
+    def sofrer_ataque(self, dano):
+
+        if self.escudo is not None:
+
+            if dano <= self.escudo.energia:
+                self.escudo.energia -= dano
+
+            else:
+                energia = self.escudo.energia
+                dano = dano - self.escudo.energia
+                self.escudo.energia = 0
+                self.integridade_casco -= dano
+        else:
+            self.integridade_casco -= dano
+
+
+        if self.integridade_casco < 0:
+            self.integridade_casco = 0
 class NaveCargueiro(NaveEspacial):
 
     def __init__(self, nome, tripulacao, integridade_casco, capacidade_carga):
