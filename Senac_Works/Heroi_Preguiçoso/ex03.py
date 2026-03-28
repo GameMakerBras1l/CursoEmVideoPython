@@ -66,3 +66,9 @@ class NaveExploradora(NaveEspacial):
         scan = random.choice(frases)
 
         return scan
+    
+def relatorio_inspecao(lista_naves):
+
+    for nave in lista_naves:
+        nave.nome
+        nave.integridade_casco
