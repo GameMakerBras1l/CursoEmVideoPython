@@ -1,0 +1,14 @@
+O uso de @property e @setter permite controlar o acesso aos atributos internos (_power e _toughness).
+Dessa forma, garantimos que valores inválidos (como números negativos) não sejam atribuídos, protegendo o estado do objeto.
+
+Diferente do método attack, onde o dano é sequencial, o método fight armazena o dano de ambas as criaturas antes de aplicá-lo.
+Isso garante que o combate ocorra de forma simultânea, conforme a mecânica estabelecida pelo codigo.
+
+A função id() mostra o endereço de memória de cada objeto. Mesmo sendo instâncias da mesma classe,
+self e opponent possuem identificadores diferentes, o que prova que ocupam espaços distintos na memória.
+Isso permite que cada objeto mantenha seu próprio estado independente.
+
+O Python gerencia objetos na memória através de referências. Cada instância criada recebe
+um identificador único (id), que representa seu endereço na memória. Mesmo compartilhando
+a mesma estrutura de classe, os dados armazenados em cada objeto são independentes.
+Isso garante encapsulamento de estado, permitindo interações seguras entre objetos sem interferência indevida.
