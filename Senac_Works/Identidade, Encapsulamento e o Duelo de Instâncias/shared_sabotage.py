@@ -64,3 +64,8 @@ if __name__ == "__main__":
     print("[!] The state is leaked! Every instance is bleeding into the other.")
     # Mensagem final explicando o problema:
     # vazamento de estado entre objetos
+
+    # O erro ocorre porque o atributo inventory foi definido como atributo de classe,
+    # fazendo com que todas as instâncias compartilhem a mesma referência em memória.
+    # Como listas são mutáveis, qualquer modificação feita por um objeto afeta os demais,
+    # causando vazamento de estado.
