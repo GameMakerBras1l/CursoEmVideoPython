@@ -1,0 +1,40 @@
+Python
+. Não força encapsulamento
+. Usa convenção:
+    . _atributo -> "protegido"
+. Usa @property para controle
+
+Por exemplo:
+
+Exemplo:
+
+self._power = power
+
+Ainda é possível acessar:
+
+criatura._power = -10  # permitido, mas errado
+
+
+Java
+.Encapsulamento obrigatório
+.Usa:
+    .private
+    .getters e setters
+
+Exemplo:
+
+private int power;
+
+public void setPower(int power) {
+    if(power < 0) throw new IllegalArgumentException();
+    this.power = power;
+}
+
+Em Python, a filosofia de "Consenting Adults" significa que o programador
+tem liberdade para acessar e modificar atributos diretamente,
+mas deve fazê-lo com responsabilidade.
+
+A abordagem de Python prioriza flexibilidade e produtividade,
+permitindo acesso direto aos atributos, enquanto Java prioriza
+segurança e controle estrito. O uso de @property representa
+um meio-termo, oferecendo validação sem perder a simplicidade da linguagem.
